@@ -29,13 +29,13 @@ function build() {
 }
 function format404() {
   log.debug('Moving 404 Page From 404 Dir To Base Dir');
-  copyFileSync(join(__dirname, '../dist/web-ui/browser/404/index.html'), join(__dirname, '../dist/web-ui/browser/404.html'));
+  copyFileSync(join(__dirname, '../dist/digi-goat/browser/404/index.html'), join(__dirname, '../dist/digi-goat/browser/404.html'));
   log.debug('Removing 404 Dir');
-  rmSync(join(__dirname, '../dist/web-ui/browser/404/'), { recursive: true });
+  rmSync(join(__dirname, '../dist/digi-goat/browser/404/'), { recursive: true });
 }
 async function sitemap() {
   const sitemap: string[] = [];
-  const rootDir = join(__dirname, '../dist/web-ui/browser');
+  const rootDir = join(__dirname, '../dist/digi-goat/browser');
 
   function scanDirectory(directory: string) {
     const items = readdirSync(directory);
@@ -127,7 +127,7 @@ async function sitemap() {
       changedPages.push(page);
     }
   }
-  writeFileSync(join(__dirname, '../dist/web-ui/browser/sitemap.json'), JSON.stringify(newSitemap, null, 2));
+  writeFileSync(join(__dirname, '../dist/digi-goat/browser/sitemap.json'), JSON.stringify(newSitemap, null, 2));
   log.debug('Writing sitemap.xml');
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${sitemap.map(page => `
@@ -139,7 +139,7 @@ async function sitemap() {
     </image:image>`).join('')}
   </url>`).join('')}
 </urlset>`;
-  writeFileSync(join(__dirname, '../dist/web-ui/browser/sitemap.xml'), sitemapXml);
+  writeFileSync(join(__dirname, '../dist/digi-goat/browser/sitemap.xml'), sitemapXml);
   if (changedPages.length) {
     log.info('Notifying IndexNow of Changes', changedPages);
     await indexNow(changedPages);
@@ -193,54 +193,11 @@ async function indexNow(pages: string[]) {
 
 function robots() {
   log.debug('Writing robots.txt');
-  writeFileSync(join(__dirname, '../dist/web-ui/browser/robots.txt'),
+  writeFileSync(join(__dirname, '../dist/digi-goat/browser/robots.txt'),
     `# Allow all URLs (see https://www.robotstxt.org/robotstxt.html)
 User-agent: *
 Disallow:
 Sitemap: https://digigoat.app/sitemap.xml`);
-}
-function manifest() {
-  log.debug('Writing Manifest');
-  writeFileSync(join(__dirname, '../dist/web-ui/browser/assets/icons/site.webmanifest'), JSON.stringify({
-    background_color: 'hsl(230, 100%, 10%)',
-    description: 'An app to merge the gap between ADGA, your farm, and the internet!',
-    display: 'standalone',
-    icons: [
-      {
-        src: './web-app-manifest-192x192.png',
-        sizes: '192x192',
-        type: 'image/png'
-      },
-      {
-        src: './web-app-manifest-512x512.png',
-        sizes: '512x512',
-        type: 'image/png'
-      }
-    ],
-    name: 'DigiGoat',
-    scope: 'https://digigoat.app/',
-    short_name: 'DigiGoat',
-    shortcuts: [
-      {
-        name: 'Home',
-        url: 'https://digigoat.app/',
-        icons: [
-          {
-            src: './web-app-manifest-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: './web-app-manifest-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
-    ],
-    start_url: 'https://digigoat.app/',
-    theme_color: 'hsl(230, 100%, 15%)'
-  }, null, 2));
 }
 (async () => {
   log.info('Building...');
@@ -255,8 +212,6 @@ function manifest() {
   }
   log.info('Generating Robots.txt...');
   robots();
-  log.info('Generating Manifest...');
-  manifest();
   if (ci) {
     console.log('::endgroup::');
   }

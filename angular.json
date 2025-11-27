@@ -26,17 +26,30 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/assets/favicon.ico",
+              "src/assets",
+              "src/assets/4a6b2e79f6d94d91b04e58bba889a414.txt"
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              {
+                "input": "/node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+                "bundleName": "bootstrap.bundle",
+                "inject": false
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "."
+              ]
+            },
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": {
+              "discoverRoutes": true,
+              "routesFile": "routes.txt"
+            },
             "ssr": {
               "entry": "src/server.ts"
             }
