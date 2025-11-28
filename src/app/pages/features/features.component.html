@@ -1,4 +1,4 @@
-<div class="container py-5" #scrollSpyContainer>
+<div class="container py-5">
   <h3 class="mb-4">DigiGoat Features:</h3>
   <div class="row">
     <!-- Unified scrollspy nav: stacked on mobile, sticky sidebar on desktop -->
@@ -35,8 +35,7 @@
       </nav>
     </div>
     <div class="col-lg-8">
-      <div #scrollContainer id="scroll-container" data-bs-spy="scroll" data-bs-target="#features-nav" data-bs-smooth-scroll="true"
-        data-bs-root-margin="0px 0px 10%" class="scrollspy-example-2" tabindex="0">
+      <div id="scroll-container" [scrollspy]="featuresNav" scrollspy-rootMargin="0px 0px -80%" class="scrollspy-example-2" tabindex="0">
         <section id="works-with-adga" class="mb-5">
           <h2 class="h4 mb-3">Works with ADGA</h2>
           <p> No more copy/paste. What used to be hours of entering goats one by one, having to look up the same information each time, is
