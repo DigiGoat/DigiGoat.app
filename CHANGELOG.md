@@ -1,3 +1,7 @@
+## 1.0.2
+* The table on the homepage no longer freezes the first column when scrolling horizontally.
+  * This was causing layout issues on smaller screens.
+
 ## 1.0.1
 * Enabled analytics
   * Google Analytics via firebase
