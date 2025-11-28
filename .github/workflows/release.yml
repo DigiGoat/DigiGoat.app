@@ -10,7 +10,6 @@ env:
 
 jobs:
   publish_release:
-    if: endsWith(github.repository, 'web-ui')
     runs-on: ubuntu-latest
 
     steps:

@@ -43,7 +43,6 @@ Thumbs.db
 
 # Scripts
 /scripts/**/*.js
-routes.txt
 
 # Testing
 /reports

@@ -10,7 +10,7 @@
     "test:ci": "ng test --ci --reporters=default --reporters=jest-junit",
     "test:watch": "ng test --watch",
     "test:file": "yarn test -u --test-path-pattern",
-    "serve:ssr": "node dist/web-ui/server/server.mjs",
+    "serve:ssr": "node dist/digigoat-app/server/server.mjs",
     "deploy": "ts-node ./scripts/deploy.ts",
     "lint": "ng lint",
     "pull-check": "ts-node ./scripts/check.ts",

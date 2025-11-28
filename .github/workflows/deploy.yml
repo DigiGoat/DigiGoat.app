@@ -95,7 +95,7 @@ jobs:
       - name: Upload website
         uses: actions/upload-artifact@v4
         with:
-          path: ./dist/web-ui/browser
+          path: ./dist/digigoat-app/browser
           name: website
 
   deploy_firebase:
@@ -127,10 +127,10 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: website
-        path: ./dist/web-ui/browser
+        path: ./dist/digigoat-app/browser
     - name: Deploy to Firebase
       run: |
-        firebase deploy --project "DigiGoat" -m "Deployed via GitHub Actions ${{github.event_name}} Run #${{ github.run_number }} - https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        firebase deploy --project "digigoat-2bcb3" -m "Deployed via GitHub Actions ${{github.event_name}} Run #${{ github.run_number }} - https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
   notify_changes:
     name: Notify Changes
