@@ -1,0 +1,21 @@
+.table-scroll-x {
+  width: 100%;
+}
+
+.table-scroll-x table {
+  min-width: 600px;
+}
+
+
+
+.table-scroll-x th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+
+.table-scroll-x thead {
+  position: sticky;
+  top: 75px;
+  z-index: 2;
+}

@@ -11,5 +11,4 @@ import { TooltipDirective } from './directives/tooltip/tooltip.directive';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'DigiGoat';
 }
