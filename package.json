@@ -1,6 +1,6 @@
 {
   "name": "digi-goat",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4000",
@@ -10,7 +10,7 @@
     "test:ci": "ng test --ci --reporters=default --reporters=jest-junit",
     "test:watch": "ng test --watch",
     "test:file": "yarn test -u --test-path-pattern",
-    "serve:ssr": "node dist/digigoat-app/server/server.mjs",
+    "serve:ssr": "node dist/digi-goat/server/server.mjs",
     "deploy": "ts-node ./scripts/deploy.ts",
     "lint": "ng lint",
     "pull-check": "ts-node ./scripts/check.ts",
@@ -52,10 +52,20 @@
     "@types/bootstrap": "^5.2.10",
     "@types/express": "^4.17.17",
     "@types/node": "^18.18.0",
+    "@types/semver": "^7.7.1",
     "@typescript-eslint/eslint-plugin": "7.11.0",
     "@typescript-eslint/parser": "7.11.0",
     "eslint": "8.57.1",
     "jest": "^30.2.0",
     "typescript": "~5.6.2"
+  },
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "jest-junit.xml",
+    "ancestorSeparator": " › ",
+    "uniqueOutputName": "false",
+    "suiteNameTemplate": "{filepath}",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}"
   }
 }

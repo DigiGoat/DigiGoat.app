@@ -3,6 +3,9 @@ name: Deploy Website
 on:
   # Runs on pushes targeting the default branch
   push:
+    branches:
+      - main
+      - beta
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -95,7 +98,7 @@ jobs:
       - name: Upload website
         uses: actions/upload-artifact@v4
         with:
-          path: ./dist/digigoat-app/browser
+          path: ./dist/digi-goat/browser
           name: website
 
   deploy_firebase:
@@ -127,7 +130,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: website
-        path: ./dist/digigoat-app/browser
+        path: ./dist/digi-goat/browser
     - name: Deploy to Firebase
       run: |
         firebase deploy --project "digigoat-2bcb3" -m "Deployed via GitHub Actions ${{github.event_name}} Run #${{ github.run_number }} - https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
