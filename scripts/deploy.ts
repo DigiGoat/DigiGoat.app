@@ -23,7 +23,7 @@ function build() {
   try {
     execSync('yarn build');
   } catch (error) {
-    log.error('Failed to Compile Project:', error, (error as Record<string, string>).stderr.toString());
+    log.error('Failed to Compile Project:', error, (error as Record<string, string>)['stderr'].toString());
     process.exit(1);
   }
 }
