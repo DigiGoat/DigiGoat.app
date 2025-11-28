@@ -1,0 +1,162 @@
+<div class="container py-5" #scrollSpyContainer>
+  <h3 class="mb-4">DigiGoat Features:</h3>
+  <div class="row">
+    <!-- Unified scrollspy nav: stacked on mobile, sticky sidebar on desktop -->
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <nav id="features-nav-wrapper"
+        class="flex-column align-items-stretch pe-lg-4 border-bottom border-lg-end py-3 py-lg-4 position-sticky"
+        style="top: 75px; max-height: calc(100vh - 75px - 16px); overflow-y: auto;">
+        <nav id="features-nav" class="nav nav-pills flex-lg-column flex-row flex-wrap gap-2 small" #featuresNav>
+          <a class="nav-link text-start px-2" href="/features#works-with-adga">Works with ADGA</a>
+          <a class="nav-link text-start px-2" href="/features#personalized-recommendations">Personalized recommendations</a>
+          <a class="nav-link text-start px-2" href="/features#open-graph-protocol">Open Graph Protocol</a>
+          <a class="nav-link text-start px-2" href="/features#optimized-for-search-engines">Optimized For Search Engines</a>
+          <a class="nav-link text-start px-2" href="/features#analytics-support">Analytics Support</a>
+          <a class="nav-link text-start px-2" href="/features#indexnow-support">IndexNow Support</a>
+          <a class="nav-link text-start px-2" href="/features#works-offline">Works offline</a>
+          <a class="nav-link text-start px-2" href="/features#internet-efficient">Internet Efficient</a>
+          <a class="nav-link text-start px-2" href="/features#open-source">Open source</a>
+          <a class="nav-link text-start px-2" href="/features#community-driven">Community driven</a>
+          <a class="nav-link text-start px-2" href="/features#personalized-support">Personalized support</a>
+          <a class="nav-link text-start px-2" href="/features#view-live-preview">View live preview</a>
+          <a class="nav-link text-start px-2" href="/features#live-preview-works-offline">Live preview works offline</a>
+          <a class="nav-link text-start px-2" href="/features#live-preview-with-gfm-markdown-support">Live preview with GFM Markdown
+            support</a>
+          <a class="nav-link text-start px-2" href="/features#spa">SPA</a>
+          <a class="nav-link text-start px-2" href="/features#optimized-image-loading">Optimized Image Loading</a>
+          <a class="nav-link text-start px-2" href="/features#automated-seo">Automated SEO</a>
+          <a class="nav-link text-start px-2" href="/features#ad-free">Ad-Free</a>
+          <a class="nav-link text-start px-2" href="/features#custom-domain">Custom Domain</a>
+          <a class="nav-link text-start px-2" href="/features#custom-emails">Custom Emails</a>
+          <a class="nav-link text-start px-2" href="/features#price">Price</a>
+          <a class="nav-link text-start px-2" href="/features#youth-discount">Youth Discount</a>
+          <a class="nav-link text-start px-2" href="/features#test-coverage">100% Test Coverage</a>
+        </nav>
+      </nav>
+    </div>
+    <div class="col-lg-8">
+      <div #scrollContainer id="scroll-container" data-bs-spy="scroll" data-bs-target="#features-nav" data-bs-smooth-scroll="true"
+        data-bs-root-margin="0px 0px 10%" class="scrollspy-example-2" tabindex="0">
+        <section id="works-with-adga" class="mb-5">
+          <h2 class="h4 mb-3">Works with ADGA</h2>
+          <p> No more copy/paste. What used to be hours of entering goats one by one, having to look up the same information each time, is
+            now just the click of a button. </p>
+          <p> When editing your goats, a convenient <code>Sync All</code> button fetches all your owned goats, their registration info (such
+            as name, id, etc.), and all the necessary goats ("related goats") to automatically construct a pedigree. </p>
+        </section>
+        <section id="personalized-recommendations" class="mb-5">
+          <h2 class="h4 mb-3">Personalized recommendations</h2>
+          <p> Some things just aren't worth your time, like if your goats' barn names are always the last word in their registered name.
+          </p>
+          <p> DigiGoat suggests those details for you so all you have to do is click the input box and it's filled in. The same goes for
+            setting up your website for the first time—DigiGoat suggests copy so you don't have to wonder what to write. </p>
+        </section>
+        <section id="open-graph-protocol" class="mb-5">
+          <h2 class="h4 mb-3">Open Graph Protocol</h2>
+          <p> Goat pages support the Open Graph Protocol so that when you share a goat's page on social media, it looks great and includes
+            the right information—name, description, and pictures. </p>
+        </section>
+        <section id="optimized-for-search-engines" class="mb-5">
+          <h2 class="h4 mb-3">Optimized For Search Engines</h2>
+          <p> DigiGoat is optimized for search engines so your site can rank higher in search results and help more people find your herd.
+          </p>
+          <p> Pages are rendered in a way that search engines can easily understand, instead of the opaque blobs many website builders
+            produce. </p>
+        </section>
+        <section id="analytics-support" class="mb-5">
+          <h2 class="h4 mb-3">Analytics Support</h2>
+          <p> DigiGoat comes with built-in support for Google Analytics and Microsoft Clarity. This means that you can track how many people
+            visit your website and what they do on it, from page views and traffic sources to heatmaps and session recordings. </p>
+        </section>
+        <section id="indexnow-support" class="mb-5">
+          <h2 class="h4 mb-3">IndexNow Support</h2>
+          <p> DigiGoat supports IndexNow so that when you publish changes, DigiGoat automatically detects which pages are modified and
+            notifies search engines, helping your site stay fresh in search results. </p>
+        </section>
+        <section id="works-offline" class="mb-5">
+          <h2 class="h4 mb-3">Works offline</h2>
+          <p> The biggest downfall of many web-based editors is that they require an active internet connection. DigiGoat lets you work
+            offline so you can add new photos and updates right away and publish when you're back on a reliable connection. </p>
+        </section>
+        <section id="internet-efficient" class="mb-5">
+          <h2 class="h4 mb-3">Internet Efficient</h2>
+          <p> Unlike most website editors that require a constant, high-speed connection, DigiGoat only uses the internet when it's actually
+            needed—such as syncing with ADGA or when you publish changes. </p>
+        </section>
+        <section id="open-source" class="mb-5">
+          <h2 class="h4 mb-3">Open source</h2>
+          <p> Every fragment of DigiGoat's code is fully public for inspection. You can rest easy knowing there's no hidden behavior behind
+            your farm's website. </p>
+        </section>
+        <section id="community-driven" class="mb-5">
+          <h2 class="h4 mb-3">Community driven</h2>
+          <p> New features are based on public request. If you have an idea that would make your farm website better, you can share it and
+            help shape DigiGoat's roadmap. </p>
+        </section>
+        <section id="personalized-support" class="mb-5">
+          <h2 class="h4 mb-3">Personalized support</h2>
+          <p> Support comes from a real person who can remember your farm and setup, instead of a faceless call center. You don't have to
+            play 20 questions every time you need a hand. </p>
+        </section>
+        <section id="view-live-preview" class="mb-5">
+          <h2 class="h4 mb-3">View live preview</h2>
+          <p> You can view a live preview of your website as you edit it. This lets you see exactly what your site will look like before you
+            publish, so you can catch layout or content issues early. </p>
+        </section>
+        <section id="live-preview-with-gfm-markdown-support" class="mb-5">
+          <h2 class="h4 mb-3">Live preview with GFM Markdown support</h2>
+          <p> The live preview supports GitHub Flavored Markdown, so you can use Markdown to format text on your website and see the result
+            in real time—even using an offline compiler that closely matches the online one. </p>
+        </section>
+        <section id="live-preview-works-offline" class="mb-5">
+          <h2 class="h4 mb-3">Live preview works offline</h2>
+          <p> The live preview itself works offline, so you can keep refining your content and layout even when you don't have an internet
+            connection. </p>
+        </section>
+        <section id="spa" class="mb-5">
+          <h2 class="h4 mb-3">SPA</h2>
+          <p> DigiGoat is a Single Page Application (SPA), which means your website feels fast and responsive. After the initial load,
+            navigating around your site doesn't require full page reloads. </p>
+        </section>
+        <section id="optimized-image-loading" class="mb-5">
+          <h2 class="h4 mb-3">Optimized Image Loading</h2>
+          <p> DigiGoat uses lazy loading so images are loaded only when they're needed, while still ensuring key goat photos appear
+            immediately when a page is opened. </p>
+        </section>
+        <section id="automated-seo" class="mb-5">
+          <h2 class="h4 mb-3">Automated SEO</h2>
+          <p> DigiGoat includes automated SEO so your website is optimized for search engines by default, without you having to manage
+            complex settings. </p>
+        </section>
+        <section id="ad-free" class="mb-5">
+          <h2 class="h4 mb-3">Ad-Free</h2>
+          <p> DigiGoat is ad-free, so there are no distracting ads on your website—just your farm and your goats. </p>
+        </section>
+        <section id="custom-domain" class="mb-5">
+          <h2 class="h4 mb-3">Custom Domain</h2>
+          <p> DigiGoat includes a custom domain so you can have your own address, like <code>www.yourfarm.com</code>, instead of a generic
+            subdomain. </p>
+        </section>
+        <section id="custom-emails" class="mb-5">
+          <h2 class="h4 mb-3">Custom Emails</h2>
+          <p> DigiGoat supports custom email addresses like <code>info&#64;yourfarm.com</code> or <code>support&#64;yourfarm.com</code> to
+            match your domain and keep your farm communication professional. </p>
+        </section>
+        <section id="price" class="mb-5">
+          <h2 class="h4 mb-3">Price</h2>
+          <p> DigiGoat is competitively priced at $100/year. While it may be more than the entry-level plans on some builders, it includes
+            many features that would otherwise be extra—especially when you factor in a custom domain. </p>
+        </section>
+        <section id="youth-discount" class="mb-5">
+          <h2 class="h4 mb-3">Youth Discount</h2>
+          <p> Recognizing that $100/year can be a lot for a 4-H project, DigiGoat offers a youth discount to make it more accessible. </p>
+        </section>
+        <section id="test-coverage" class="mb-5">
+          <h2 class="h4 mb-3">100% Test Coverage</h2>
+          <p> DigiGoat has 100% test coverage, meaning every part of the system is exercised by automated tests to help ensure reliability
+            as the platform evolves. </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

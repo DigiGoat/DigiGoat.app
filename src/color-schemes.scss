@@ -57,6 +57,10 @@
   color: var(--text-color) !important;
 }
 
+.table {
+  --bs-table-bg: var(--secondary-color);
+}
+
 /**Colors for devices in light mode*/
 @include color-mode(light) {
   .nav-tabs {
@@ -85,5 +89,9 @@
   .color-scheme-quaternary {
     background-color: var(--quaternary-light-color) !important;
     color: var(--text-light-color) !important;
+  }
+
+  .table {
+    --bs-table-bg: var(--secondary-light-color);
   }
 }
