@@ -21,7 +21,7 @@ const log = {
 function build() {
   log.debug('Compiling Project');
   try {
-    execSync('yarn build --base-href https://digigoat.app/');
+    execSync('yarn build');
   } catch (error) {
     log.error('Failed to Compile Project:', error, (error as Record<string, string>).stderr.toString());
     process.exit(1);
