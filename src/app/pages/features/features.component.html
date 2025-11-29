@@ -2,24 +2,23 @@
   <h3 class="mb-4">DigiGoat Features:</h3>
   <div class="row">
     <!-- Unified scrollspy nav: stacked on mobile, sticky sidebar on desktop -->
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <nav id="features-nav-wrapper"
-        class="flex-column align-items-stretch pe-lg-4 border-bottom border-lg-end py-3 py-lg-4 position-sticky"
+    <div class="col-md-4 mb-4 mb-md-0">
+      <nav id="features-nav-wrapper" class="flex-column align-items-stretch pe-md-4 border-bottom border-end py-3 py-md-4 position-sticky"
         style="top: 75px; max-height: calc(100vh - 75px - 16px); overflow-y: auto;">
-        <nav id="features-nav" class="nav nav-pills flex-lg-column flex-row flex-wrap gap-2 small" #featuresNav> @for (feature of features;
+        <nav id="features-nav" class="nav nav-pills flex-md-column flex-row flex-wrap gap-2 small" #featuresNav> @for (feature of features;
           track $index) { <nav class="nav nav-pills flex-column">
             <a class="nav-link text-start px-2" routerLink="/features" [fragment]="feature.featureId" routerLinkActive="unsaved"
               [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }">{{feature.feature}}</a>
             @if(feature.subFeatures?.length) { <nav class="nav nav-pills flex-column"> @for (subFeature of feature.subFeatures ?? []; track
-              $index) { <a class="nav-link text-start px-2 ms-3 d-none d-lg-block" routerLink="/features" [fragment]="subFeature.featureId"
+              $index) { <a class="nav-link text-start px-2 ms-3 d-none d-md-block" routerLink="/features" [fragment]="subFeature.featureId"
                 routerLinkActive="unsaved"
                 [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }">{{subFeature.feature}}</a>
               } </nav> }
           </nav> } </nav>
       </nav>
     </div>
-    <div class="col-lg-8">
-      <div id="scroll-container" [scrollspy]="featuresNav" scrollspy-rootMargin="0px 0px -70%" class="scrollspy-example-2" tabindex="0">
+    <div class="col-md-8">
+      <div id="scroll-container" [scrollspy]="featuresNav" scrollspy-rootMargin="-75px 0px -70%" class="scrollspy-example-2" tabindex="0">
         @for (feature of features; track $index) { <section [id]="feature.featureId" class="mb-5">
           <h2 class="h4 mb-2" routerLink="/features" [fragment]="feature.featureId" routerLinkActive="unsaved"
             [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }">

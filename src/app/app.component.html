@@ -1,8 +1,8 @@
 <!-- Navbar to display tabs at the top of the page -->
-<header class="navbar navbar-expand-lg sticky-top color-scheme-secondary">
+<header class="navbar navbar-expand-md sticky-top color-scheme-secondary">
   <div class="container-fluid">
     <img ngSrc="./assets/icons/favicon.svg" alt="Logo" class="d-inline-block align-text-top" width="70" height="70" priority>
-    <a class="navbar-brand ps-2 text-center text-lg-start" routerLink="/">
+    <a class="navbar-brand ps-2 text-center text-md-start" routerLink="/">
       <p class="h4" test-id="menubar">DigiGoat</p>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -10,7 +10,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav nav-underline nav-fill w-100">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0 nav nav-underline nav-fill w-100">
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/" [routerLinkActiveOptions]="{exact: true}"
             data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</a>
@@ -19,6 +19,9 @@
           <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/features" data-bs-toggle="collapse"
             data-bs-target=".navbar-collapse.show">Features</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/faq" data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show">FAQ</a>
       </ul>
     </div>
   </div>

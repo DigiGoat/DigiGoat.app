@@ -1,0 +1,12 @@
+[
+  {
+    "q": "How do I request new features or report bugs?",
+    "a": "That's easy! Just send an email to <a href=\"mailto:support@digigoat.app\">support@digigoat.app</a> describing the issue or feature you'd like to see.",
+    "id": "request-a-feature"
+  },
+  {
+    "q": "How do I get started with DigiGoat?",
+    "a": "Great question! This website is still under construction, but we're working hard to bring you a comprehensive guide soon. Once it's ready, you'll be able to find it on our <a href=\"/get-started\">Getting Started</a> guide for step-by-step instructions on setting up your website.",
+    "id": "getting-started"
+  }
+]
