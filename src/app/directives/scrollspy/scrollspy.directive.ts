@@ -25,6 +25,14 @@ export class ScrollspyDirective implements AfterViewInit, OnDestroy {
       this.bsScrollspy = bootstrap.ScrollSpy.getOrCreateInstance(this.el.nativeElement, { target: this.scrollspyTarget, rootMargin: this.rootMargin, smoothScroll: this.smoothScroll, threshold: this.threshold });
       const fragment = this.route.snapshot.fragment;
       this.scrollspyTarget.querySelector<HTMLAnchorElement>(`a[href$="#${fragment}"]`)?.click();
+      this.el.nativeElement.addEventListener('activate.bs.scrollspy', (event: { relatedTarget?: HTMLElement; }) => {
+        if (getComputedStyle(this.scrollspyTarget).flexDirection === 'row') return;
+        event.relatedTarget?.scrollIntoView({
+          block: 'nearest', // or 'center' if you prefer
+          inline: 'nearest',
+          behavior: 'instant',
+        });
+      });
     }
   }
   ngOnDestroy(): void {

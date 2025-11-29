@@ -1,3 +1,6 @@
+## 1.1.1
+* Updated the features page so that it keeps the current tab in the sidebar scrolled into view.
+
 ## 1.1.0
 * Added an FAQ page!
 
