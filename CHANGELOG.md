@@ -1,3 +1,6 @@
+## 1.2.1
+* Fixed a small bug causing "analytics works!" to appear beneath the footer
+
 ## 1.2.0
 * Updated the socials links to link to the actual Instagram and Threads accounts.
 
