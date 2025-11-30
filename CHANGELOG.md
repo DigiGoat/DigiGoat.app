@@ -1,3 +1,7 @@
+## 1.2.2
+* Fixed the missing background color for the page body
+* Also added the javascript disabled disclaimer
+
 ## 1.2.1
 * Fixed a small bug causing "analytics works!" to appear beneath the footer
 
