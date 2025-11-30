@@ -1,3 +1,6 @@
+## 1.2.0
+* Updated the socials links to link to the actual Instagram and Threads accounts.
+
 ## 1.1.1
 * Updated the features page so that it keeps the current tab in the sidebar scrolled into view.
 
