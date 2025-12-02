@@ -1,3 +1,7 @@
+## 1.2.3
+* Updated the link icons on the FAQ and Features pages to only appear when hovering over the headers.
+  * This was done to reduce visual clutter.
+
 ## 1.2.2
 * Fixed the missing background color for the page body
 * Also added the javascript disabled disclaimer
