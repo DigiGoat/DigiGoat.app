@@ -1,3 +1,7 @@
+## 1.2.4
+* Added socials to the home page
+* Added email link to the home page
+
 ## 1.2.3
 * Updated the link icons on the FAQ and Features pages to only appear when hovering over the headers.
   * This was done to reduce visual clutter.
