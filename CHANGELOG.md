@@ -1,3 +1,7 @@
+## 1.2.5
+* Changed the background color of the body to the secondary color scheme.
+  * This now matches the header and footer when scrolling beyond the viewport height.
+
 ## 1.2.4
 * Added socials to the home page
 * Added email link to the home page
