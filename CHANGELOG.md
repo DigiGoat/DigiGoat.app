@@ -1,3 +1,6 @@
+## 1.3.1
+* Fixed a bug preventing indexnow from working
+
 ## 1.3.0
 * Added meta descriptions to all the pages for better SEO and social media sharing.
   * The descriptions are dynamically generated based on the content of each page.
