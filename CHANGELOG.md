@@ -1,3 +1,7 @@
+## 1.3.0
+* Added meta descriptions to all the pages for better SEO and social media sharing.
+  * The descriptions are dynamically generated based on the content of each page.
+
 ## 1.2.5
 * Changed the background color of the body to the secondary color scheme.
   * This now matches the header and footer when scrolling beyond the viewport height.
