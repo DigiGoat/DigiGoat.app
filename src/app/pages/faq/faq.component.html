@@ -4,8 +4,8 @@
       class="accordion-header">
       <button class="accordion-button color-scheme-tertiary rounded-5" type="button" data-bs-toggle="collapse"
         [attr.data-bs-target]="'#' + faq.id" aria-expanded="false" [attr.aria-controls]="faq.id"
-        [class.collapsed]="!linkIcon.classList.contains('unsaved')">
-        {{faq.q}} <a class="ps-1" routerLink="/faq" [fragment]="faq.id" routerLinkActive="unsaved"
+        [class.collapsed]="!linkIcon.classList.contains('active')">
+        {{faq.q}} <a class="ps-1 hyperlink" routerLink="/faq" [fragment]="faq.id" routerLinkActive="active"
           [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }" #linkIcon><svg
             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
             <path

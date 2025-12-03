@@ -1,3 +1,19 @@
+## 1.3.0
+* Added meta descriptions to all the pages for better SEO and social media sharing.
+  * The descriptions are dynamically generated based on the content of each page.
+
+## 1.2.5
+* Changed the background color of the body to the secondary color scheme.
+  * This now matches the header and footer when scrolling beyond the viewport height.
+
+## 1.2.4
+* Added socials to the home page
+* Added email link to the home page
+
+## 1.2.3
+* Updated the link icons on the FAQ and Features pages to only appear when hovering over the headers.
+  * This was done to reduce visual clutter.
+
 ## 1.2.2
 * Fixed the missing background color for the page body
 * Also added the javascript disabled disclaimer

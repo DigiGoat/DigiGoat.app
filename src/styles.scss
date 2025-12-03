@@ -54,3 +54,11 @@ ul {
   color: var(--bs-teal) !important;
   //font-style: italic !important;
 }
+
+*:not(:hover)>.hyperlink:not(.active) {
+  display: none
+}
+
+.hyperlink.active {
+  color: var(--bs-teal) !important;
+}
