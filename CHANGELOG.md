@@ -1,3 +1,6 @@
+## 1.3.2
+* Added the favicon back (it got missed in the last update)
+
 ## 1.3.1
 * Fixed a bug preventing indexnow from working
 
