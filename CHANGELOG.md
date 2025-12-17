@@ -1,3 +1,8 @@
+## 1.4.1
+* Added link to manage your subscription on the home page.
+* Hyperlinked email address on the terms of service page.
+* Updated terms of service to clarify domain cost calculation for refunds.
+
 ## 1.4.0
 * Added Privacy Policy and Terms of Service pages.
   * Links to these pages have been added to the footer of the website.
