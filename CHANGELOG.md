@@ -1,3 +1,9 @@
+## 1.4.3
+* Changed terms of service wording for domain cost
+
+## 1.4.2
+* Added redirects for /privacy and /terms to their respective pages.
+
 ## 1.4.1
 * Added link to manage your subscription on the home page.
 * Hyperlinked email address on the terms of service page.
