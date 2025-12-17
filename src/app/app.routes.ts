@@ -6,5 +6,7 @@ export const routes: Routes = [
   { path: 'faq', loadComponent: () => import('./pages/faq/faq.component').then(m => m.FaqComponent), title: 'FAQ' },
   { path: 'privacy-policy', loadComponent: () => import('./pages/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent), title: 'Privacy Policy' },
   { path: 'terms-of-service', loadComponent: () => import('./pages/terms-of-service/terms-of-service.component').then(m => m.TermsOfServiceComponent), title: 'Terms of Service' },
+  { path: 'privacy', redirectTo: 'privacy-policy', pathMatch: 'full' },
+  { path: 'terms', redirectTo: 'terms-of-service', pathMatch: 'full' },
   { path: '**', loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent), title: 'Page Not Found' }
 ];
