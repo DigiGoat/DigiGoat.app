@@ -1,3 +1,6 @@
+## 1.4.3
+* Changed terms of service wording for domain cost
+
 ## 1.4.2
 * Added redirects for /privacy and /terms to their respective pages.
 
