@@ -1,3 +1,8 @@
+## 1.4.0
+* Added Privacy Policy and Terms of Service pages.
+  * Links to these pages have been added to the footer of the website.
+  * You will be required to accept these terms when purchasing a subscription.
+
 ## 1.3.2
 * Added the favicon back (it got missed in the last update)
 
