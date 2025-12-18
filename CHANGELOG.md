@@ -1,3 +1,6 @@
+## 1.5.0
+* Had Copilot do a full review and rewrite of the terms of conditions and privacy policy.
+
 ## 1.4.3
 * Changed terms of service wording for domain cost
 
