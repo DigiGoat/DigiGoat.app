@@ -5,7 +5,7 @@
     "redirects": [
       {
         "source": "/terms",
-        "destination": "/terms-of-conditions",
+        "destination": "/terms-of-service",
         "type": 301
       },
       {

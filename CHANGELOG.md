@@ -1,3 +1,6 @@
+## 1.5.3
+* Fixed the `/terms` redirect pointing to `/terms-of-conditions` instead of `/terms-of-service`.
+
 ## 1.5.2
 * Added meta descriptions to the terms of service and privacy policy pages.
 * Fixed a bug causing firebase analytics to activate in dev sessions.
@@ -8,7 +11,7 @@
   * Also made it so that the targeted element is colored differently to indicate that it is the target of the hash link.
 
 ## 1.5.0
-* Had Copilot do a full review and rewrite of the terms of conditions and privacy policy.
+* Had Copilot do a full review and rewrite of the terms of service and privacy policy.
 
 ## 1.4.3
 * Changed terms of service wording for domain cost
