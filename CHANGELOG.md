@@ -1,3 +1,8 @@
+## 1.5.1
+* Added proper redirects for the terms of service and privacy policy pages.
+* Made it so that if an element is targeted via a hash link, it will no longer be hidden behind the header.
+  * Also made it so that the targeted element is colored differently to indicate that it is the target of the hash link.
+
 ## 1.5.0
 * Had Copilot do a full review and rewrite of the terms of conditions and privacy policy.
 
