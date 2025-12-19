@@ -2,26 +2,16 @@
   "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
   "hosting": {
     "public": "dist/digi-goat/browser",
-    "rewrites": [
+    "redirects": [
       {
-        "source": "/does/**",
-        "destination": "/does/Doe-Not-Found/index.html"
+        "source": "/terms",
+        "destination": "/terms-of-conditions",
+        "type": 301
       },
       {
-        "source": "/bucks/**",
-        "destination": "/bucks/Buck-Not-Found/index.html"
-      },
-      {
-        "source": "/references/**",
-        "destination": "/references/Reference-Not-Found/index.html"
-      },
-      {
-        "source": "/for-sale/**",
-        "destination": "/for-sale/Goat-Not-Found/index.html"
-      },
-      {
-        "source": "/kidding-schedule/**",
-        "destination": "/kidding-schedule/Kidding-Goat/index.html"
+        "source": "/privacy",
+        "destination": "/privacy-policy",
+        "type": 301
       }
     ],
     "headers": [

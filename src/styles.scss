@@ -59,6 +59,12 @@ ul {
   display: none
 }
 
-.hyperlink.active {
+.hyperlink.active,
+*:has(> .hyperlink.active),
+:target {
   color: var(--bs-teal) !important;
+}
+
+html {
+  scroll-padding-top: 90px;
 }
