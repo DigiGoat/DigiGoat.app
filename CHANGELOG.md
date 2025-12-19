@@ -1,3 +1,7 @@
+## 1.5.2
+* Added meta descriptions to the terms of service and privacy policy pages.
+* Fixed a bug causing firebase analytics to activate in dev sessions.
+
 ## 1.5.1
 * Added proper redirects for the terms of service and privacy policy pages.
 * Made it so that if an element is targeted via a hash link, it will no longer be hidden behind the header.

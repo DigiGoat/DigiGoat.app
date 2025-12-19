@@ -31,7 +31,9 @@ export class AnalyticsComponent implements OnInit {
       if ('clarity' in window) {
         window.clarity('set', 'Color Scheme', color);
       }
-      this.firebaseService.init();
+      if (!this.platformService.isDev) {
+        this.firebaseService.init();
+      }
     }
   }
 }
