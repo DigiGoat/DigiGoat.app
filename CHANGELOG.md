@@ -1,3 +1,9 @@
+## 1.6.0
+* Added a setup page that open DigiGoat with their setup via a deep link.
+  * The page is located at `/setup` and will redirect to the deep link after a short delay.
+  * The page also includes instructions for users who may have trouble with deep links.
+  * This page only appears if the setup "payload" is provided in the URL query parameters and begins with `{"repo": "`
+
 ## 1.5.3
 * Fixed the `/terms` redirect pointing to `/terms-of-conditions` instead of `/terms-of-service`.
 
