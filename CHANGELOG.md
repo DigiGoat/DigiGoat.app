@@ -1,3 +1,9 @@
+## 1.8.0
+* Added the "Get Started" Page!
+  * This page provides a step-by-step guide to getting started with DigiGoat, including purchasing a subscription, setting up custom domains, and more.
+  * The content for this page is stored in `src/assets/resources/get-started.json`, making it easy to update and expand in the future.
+* DigiGoat is officially ready to go public!
+
 ## 1.7.1
 * Finalized onboarding email content and stylings!
 

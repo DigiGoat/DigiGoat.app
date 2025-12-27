@@ -10,5 +10,6 @@ export const routes: Routes = [
   { path: 'privacy', redirectTo: 'privacy-policy', pathMatch: 'full' },
   { path: 'terms', redirectTo: 'terms-of-service', pathMatch: 'full' },
   { path: 'setup', loadComponent: () => import('./pages/setup/setup.component').then(m => m.SetupComponent), title: 'Setup', canMatch: [setupPayloadGuard] },
+  { path: 'get-started', loadComponent: () => import('./pages/get-started/get-started.component').then(m => m.GetStartedComponent), title: 'Get Started' },
   { path: '**', loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent), title: 'Page Not Found' }
 ];

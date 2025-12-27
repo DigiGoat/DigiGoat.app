@@ -1,0 +1,98 @@
+[
+  {
+    "step": "Step 1: Download And Install DigiGoat",
+    "id": "download-and-install",
+    "description": "<p>Let\u2019s get DigiGoat on your computer and ready to use.</p>",
+    "subSteps": [
+      {
+        "step": "Download DigiGoat",
+        "id": "download-digigoat",
+        "description": "<ol><li>Go to <a href=\"https://github.com/DigiGoat/client-app/releases/latest\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/DigiGoat/client-app/releases/latest</a>.</li><li>Download the installer for your computer:<ul><li><strong>Windows:</strong> download the file ending in <code>.Setup.exe</code>.</li><li><strong>Mac:</strong> download <code>-arm64.dmg</code> for M-series Macs, or <code>-x64.dmg</code> for Intel Macs. If you\u2019re unsure, pick <code>-x64.dmg</code>.</li></ul></li></ol>"
+      },
+      {
+        "step": "Install DigiGoat",
+        "id": "install-digigoat",
+        "description": "<ol><li><strong>Windows:</strong> After download, Windows may show a warning. Click the <strong>More info</strong> link, then choose <strong>Run anyway</strong>. Then open the installer from your Downloads folder. <em>(Video coming soon.)</em></li><li><strong>Mac:</strong> Open the downloaded <code>.dmg</code>, then drag <strong>DigiGoat</strong> into your <strong>Applications</strong> folder. <em>(Video coming soon.)</em><div class=\"mt-2\"><strong>Important (macOS security):</strong> Due to recent Apple restrictions, you may need to \u201cde-quarantine\u201d the app. Open the <strong>Terminal</strong> app and run:<br><code>xattr -d com.apple.quarantine /Applications/DigiGoat.app</code></div></li></ol>"
+      },
+      {
+        "step": "Prepare The App (Git)",
+        "id": "prepare-git",
+        "description": "<p>The first time you open DigiGoat, you may see an error like <strong>\u201cGit Not Installed!\u201d</strong>. Git is the tool DigiGoat uses behind the scenes to track and upload your changes.</p><p>Follow the instructions shown in the app to install Git. Once Git is installed, restart DigiGoat and you\u2019re good to go.</p>"
+      }
+    ]
+  },
+  {
+    "step": "Step 2: (Optional) Try It Out First (For Free!!!!)",
+    "id": "try-it-free",
+    "description": "<p>When DigiGoat opens it will present you with <strong>setup options</strong>. If you\u2019d like, enter in your <strong>name</strong> and <strong>email</strong>. Don't worry, these are only used for if you publish, until then nothing leaves the app. This will setup a blank website. From here you can build your whole site without paying <strong>anything</strong>.</p><p>When you decide you want to publish publicly, we can keep the work you\u2019ve already done.</p><p>Until then, you can preview what your site would look like using <a href=\"/get-started#live-preview\">Live Preview</a>.</p>"
+  },
+  {
+    "step": "Step 3: Purchase DigiGoat",
+    "id": "purchase-digigoat",
+    "description": "<ol><li>When you're ready to go public, head over to <a href=\"https://buy.digigoat.app/\" target=\"_blank\" rel=\"noopener noreferrer\">https://buy.digigoat.app/</a> to checkout.</li><li>If you want to set up <a href=\"/get-started#icloud-custom-domain\">custom email</a> and/or <a href=\"/get-started#email-forwards\">email forwards</a>, you can add those to your subscription. (For email forwards, set the quantity to however many forwards you want.)</li><li>Watch your inbox for any follow-up questions. When your setup is ready, you\u2019ll receive an email from <code>onboarding@digigoat.app</code> with setup instructions.</li></ol>"
+  },
+  {
+    "step": "(Optional) Step 4: Set Up A Custom Email",
+    "id": "custom-email",
+    "description": "<p>If you want an email address at your farm domain (example: <code>Digi@yourfarm.com</code>), choose one of the options below.</p>",
+    "subSteps": [
+      {
+        "step": "Option A: Email Forwards (Easiest)",
+        "id": "email-forwards",
+        "description": "<ol><li>Email <code>onboarding@digigoat.app</code> with:<ul><li>the addresses you want forwarded (they must end with your farm domain, e.g. if your farm is <code>yourfarm.com</code> a possible email is <code>Digi@yourfarm.com</code>)</li><li>the destination email address(es) you want them forwarded to</li></ul></li><li>Email forwards are quick to set up. The main caveat: when you reply, it will usually send from your personal email address (not the forwarded address).</li><li>You\u2019re limited to up to 20 free forwarded addresses with this option, which is plenty for most farms. ($5/year per forward after that)</li></ol>"
+      },
+      {
+        "step": "Option B: iCloud Custom Email Domain",
+        "id": "icloud-custom-domain",
+        "description": "<ol><li>You\u2019ll need an iCloud+ plan (any tier works; they start around $12/year).</li><li>Go to <a href=\"https://www.icloud.com/icloudplus/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.icloud.com/icloudplus/</a> \u2192 <strong>Custom Email Domain</strong> \u2192 <strong>Add a domain you own</strong>.</li><li>Select whether you\u2019re creating emails for family or just yourself, then enter your website domain (example: <code>yourfarm.com</code>).</li><li><em>(Image coming soon.)</em> When you receive Apple\u2019s email with the subject/header <strong>\u201cFinish setting up your custom email domain\u201d</strong>, forward it to <code>onboarding@digigoat.app</code>.</li><li>After DigiGoat finishes the DNS setup, you\u2019ll get a reply instructing you to return to the iCloud page and click <strong>Verify</strong> for your domain.</li><li>You can then create up to 3 email addresses that can send/receive mail. <strong>Note:</strong> If you want to receive email for more than those 3 addresses, enable <strong>Allow All Incoming Messages</strong>. <em>(Image coming soon.)</em></li></ol>"
+      }
+    ]
+  },
+  {
+    "step": "Step 5: Next Steps",
+    "id": "next-steps",
+    "description": "<p>Now that DigiGoat is installed and your project is set up, here\u2019s a good path to get your site looking great quickly.</p>",
+    "subSteps": [
+      {
+        "step": "Live Preview",
+        "id": "live-preview",
+        "description": "<p>Live Preview lets you see what your site will look like as you make changes, even before publishing.</p><ol><li>In DigiGoat, click the <strong>Live Preview <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-play\" viewBox=\"0 0 16 16\"><path d=\"M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z\"/></svg></strong> button in the top-right.</li><li>The first time you do this, it will request permission to download Node.js (this is a javascript compiler required to compile your website)</li><li>You will also be prompted that dependencies need to be installed. This will happen periodically in the future as well from certain DigiGoat updates, but they will be much faster after the first time</li><li>Once everything is downloaded, it will take a moment or two to compile your website and then a window will pop up with exactly as your website will look on the internet</li><li>If you edit your goats or homepage you will notice changes reflected immediately once you hit save</li></ol><p><strong>Note:</strong> Live Preview uses your computer\u2019s resources to run. If you notice performance issues, try closing the Live Preview window when you\u2019re not actively using it. Additionally, you may have any of these steps running in the background as you work on your website, they will not cause interference</p>"
+      },
+      {
+        "step": "Create Your Website\u2019s Homepage",
+        "id": "create-homepage",
+        "description": "<ol><li>If you see a prompt that says <code>Login To Your ADGA Account</code>, click it. Once signed in, several fields can be auto-filled.</li><li>Fill out your farm\u2019s name (full name, plus an abbreviated name if desired).</li><li>Fill out the owner field (shown on your homepage and in the footer of every page).</li><li>Enter a contact email (shown on your homepage and in the footer). This is also the email DigiGoat will use to contact you when new milk test data is synced.</li><li>Add content for your homepage (Markdown and images supported).</li><li>Add sale terms and pricing info (recommended if you plan to enable the kidding schedule or for-sale pages).</li><li>Add your farm\u2019s socials (Facebook, Instagram, and Threads currently supported).</li></ol>"
+      },
+      {
+        "step": "Create Your Site\u2019s Favicon",
+        "id": "create-favicon",
+        "description": "<p>Your favicon is the small icon shown in the browser tab, navbar, and on your homepage.</p><ol><li>Go to <a href=\"https://realfavicongenerator.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://realfavicongenerator.net</a> and upload your farm\u2019s logo.</li><li>Go through the steps and adjust settings to frame your logo best. (Ignore fields asking for your website name/theme colors; DigiGoat fills these out automatically.)</li><li>Click <strong>Next</strong>, then click <strong>Download</strong>.</li><li>Unzip the downloaded file.</li><li>In DigiGoat, click <code>Change Favicon</code> and select the folder you just unzipped.</li><li>That\u2019s it!</li></ol>"
+      },
+      {
+        "step": "Add Your Goats",
+        "id": "add-your-goats",
+        "description": "<ol><li>Click <strong>Sync All</strong> (yep, it\u2019s that easy).</li><li>When sync finishes, you should see the goats currently in your ADGA account.</li><li>To delete a goat, hover over their name and click the red trash can.</li><li>To manually add a goat, type their name or ID in the relevant list\u2019s search bar. When results load, click your animal. (You can add pets too\u2014just click <strong>Add unregistered goat</strong> in the results.)</li><li><strong>Recommended:</strong> Click each animal and set their nickname (what you call them in the barn). DigiGoat will suggest the last word of the registered name.</li><li>To fix capitalization in a name, click the letter you want to change.</li><li>You can add a description for each animal. The first 3 lines show in list views; the full description shows on the goat\u2019s page. (Markdown supported.)</li><li>To add images: return to the main window, hover over a goat, click <strong>Add images</strong>, then click or drag/drop uploads. If you\u2019re migrating from an old site, you can right-click an existing image, copy its link, paste it under the upload button, and DigiGoat can download it for you.</li><li>To re-order goats: hover the goat you want to move, grab the 3-bar handle, and drag it to the desired position.</li></ol>"
+      },
+      {
+        "step": "Add References",
+        "id": "add-references",
+        "description": "<p>References are for animals that you\u2019ve owned or sold but still want to display.</p><ol><li>In the References search bar, type an animal\u2019s name or ID.</li><li>Follow the same process as <a href=\"/get-started#add-your-goats\">Add your goats</a>.</li><li><strong>Recommended:</strong> Run <strong>Sync All</strong> again when you\u2019re done. At minimum, run <strong>Sync Related</strong>.</li><li>When you\u2019re ready to show the page on your site, flip the switch to <strong>Enabled</strong>.</li></ol>"
+      },
+      {
+        "step": "Add Goats For Sale",
+        "id": "add-goats-for-sale",
+        "description": "<ol><li>Use the search bar to look up animals the same way you do for References.</li><li>Follow the same process as <a href=\"/get-started#add-your-goats\">Add your goats</a>.</li><li>You\u2019ll also be able to set a price, which is displayed on the animal and in the list for quick reference.</li><li><strong>Recommended:</strong> Run <strong>Sync All</strong> again when you\u2019re done. At minimum, run <strong>Sync Related</strong>.</li><li>When you\u2019re ready to show the page on your site, flip the switch to <strong>Enabled</strong>.</li></ol>"
+      },
+      {
+        "step": "Add A Kidding Schedule",
+        "id": "add-kidding-schedule",
+        "description": "<ol><li>Go to the <strong>Kidding Schedule</strong> tab in the app.</li><li>(Optional) Add a description at the top of the list to display on your kidding schedule page.</li><li>Click <strong>Add a breeding</strong> to add an entry.</li><li>In the breeding, click the <strong>Dam</strong> input and start typing the doe\u2019s name or ID. Matching goats will appear from your Does and References lists. Click the doe you want.</li><li>For the <strong>Sire</strong>, do the same process\u2014search results come from your Bucks and References lists.</li><li>After breeding, enter the date in the <strong>Exposed</strong> field.</li><li>The due date auto-calculates from Exposed (145 days for Nigerian Dwarfs, 150 for Standards). <strong>Note:</strong> it won\u2019t switch to 145 until a Nigerian Dwarf is selected as the Dam, so wait to rely on the due date until after you\u2019ve selected the Dam.</li><li>(Optional) Add notes (ultrasound counts are a great use here).</li><li>When the doe kids, enter the date in <strong>Kidded</strong>. (At that point, the website no longer displays the original due date\u2014it\u2019s kept for your records.)</li><li>When you\u2019re ready to show the page, flip the switch to <strong>Enabled</strong>.</li><li>To rearrange breedings, use the same 3-line grab handle as reordering goats. (An update is in the works to make this easier.)</li></ol>"
+      },
+      {
+        "step": "Add Custom Pages",
+        "id": "add-custom-pages",
+        "description": "<p>Custom pages are perfect for those types of pages that just can't be automated, like \"About Us\", \"Goat Milk Soap\", or \"Goat Cheese\".</p><ol><li>To add a custom page, go the the custom pages tab in the app.</li><li>Click <strong>Add a Custom Page</strong>.</li><li>This should open the page you just created. In it, give the page a title (to be displayed in your sites menubar) and some content (markdown supported).</li><li>Once you're done, close the window and you're good to go!</li></ol>"
+      }
+    ]
+  }
+]
