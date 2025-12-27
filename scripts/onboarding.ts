@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { readFileSync } from 'fs';
+import { createReadStream, readFileSync } from 'fs';
 import { createTransport } from 'nodemailer';
 import { join } from 'path';
 
@@ -16,6 +16,12 @@ const log = {
   error: (...message: unknown[]): void => console.error(`${ci ? '::error::' : ''}${chalk.redBright(...message)}`),
   success: (...message: unknown[]): void => console.log(chalk.greenBright(...message)),
   notice: (...message: unknown[]): void => console.log(ci ? '::notice::' : '', chalk.cyanBright(...message)),
+};
+
+const mask = (value?: string): string => {
+  if (typeof value !== 'string') return '';
+  if (value.length <= 2) return value;
+  return value[0] + '*'.repeat(value.length - 2) + value[value.length - 1];
 };
 
 function createContext() {
@@ -35,16 +41,17 @@ function createContext() {
   }
   if (process.env['ONBOARD_TOKEN']) {
     payloadObj.token = process.env['ONBOARD_TOKEN'];
-    log.debug('Token set to', payloadObj.token);
+    log.debug('Token set to', mask(payloadObj.token));
   }
   if (process.env['ONBOARD_NAME']) {
     payloadObj.name = process.env['ONBOARD_NAME'];
-    log.debug('Name set to', payloadObj.name);
+    log.debug('Name set to', mask(payloadObj.name));
   }
   if (process.env['ONBOARD_EMAIL']) {
     payloadObj.email = process.env['ONBOARD_EMAIL'];
     userEmail = process.env['ONBOARD_EMAIL'];
-    log.debug('Email set to', userEmail);
+    const splitEmail = userEmail.split('@');
+    log.debug('Email set to', mask(splitEmail[0]) + splitEmail[1]);
   } else {
     log.error('ONBOARD_EMAIL is not set, this is required.');
     process.exit(1);
@@ -61,13 +68,13 @@ async function createEmail(context: Record<string, string | undefined>) {
   log.debug('Inlining (purged) Bootstrap CSS for email...');
   email = await inlineBootstrapForEmail(email);
   log.debug('Reading and formatting raw email...');
-  log.debug(email);
-  // Replace {{VAR}} with process.env['VAR'] values (fallback to empty string)
+  // Replace {{VAR}} with context values (fallback to the var name)
   const rawEmail = readFileSync(join(__dirname, './templates/onboarding.txt'), 'utf-8').replace(/\{\{([^}]+)\}\}/g, (_, varName: string) => context[varName] ?? varName);
   return { email, rawEmail };
 }
 async function sendEmail(email: string, rawEmail: string, to: string) {
-  log.debug('Sending onboarding email to', to);
+  const splitEmail = to.split('@');
+  log.debug('Sending onboarding email to', mask(splitEmail[0]) + splitEmail[1]);
   log.debug('Creating transporter...');
   // Create a test account or replace with real credentials.
   const transporter = createTransport({
@@ -92,7 +99,7 @@ async function sendEmail(email: string, rawEmail: string, to: string) {
     attachments: [
       {
         filename: 'web-app-manifest-192x192.png',
-        path: '../src/assets/icons/web-app-manifest-192x192.png',
+        content: createReadStream(join(__dirname, '../src/assets/icons/web-app-manifest-192x192.png')),
         cid: 'web-app-manifest-192x192.png', // same cid value as in the html img src
       },
     ],
