@@ -37,7 +37,7 @@ env:
 
 jobs:
   onboard:
-    name: Build
+    name: Onboard
     runs-on: ubuntu-latest
 
     steps:
