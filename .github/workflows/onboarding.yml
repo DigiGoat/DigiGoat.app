@@ -1,4 +1,5 @@
 name: Onboard User
+run-name: Onboard ${{ inputs.repo }}
 
 on:
 
