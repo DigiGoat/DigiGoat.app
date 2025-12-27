@@ -106,7 +106,7 @@ async function sendEmail(email: string, rawEmail: string, to: string) {
       {
         filename: 'web-app-manifest-192x192.png',
         content: createReadStream(join(__dirname, '../src/assets/icons/web-app-manifest-192x192.png')),
-        cid: 'web-app-manifest-192x192.png', // same cid value as in the html img src
+        cid: 'digi@digigoat.app', // same cid value as in the html img src
       },
     ],
 
