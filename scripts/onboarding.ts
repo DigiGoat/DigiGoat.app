@@ -56,7 +56,7 @@ function createContext() {
 async function createEmail(context: Record<string, string | undefined>) {
   log.debug('Reading and formatting email...');
   // Replace {{VAR}} with context values (fallback to the var name)
-  let email = readFileSync(join(__dirname, `./templates/onboardingv2.html`), 'utf-8')
+  let email = readFileSync(join(__dirname, `./templates/onboarding.html`), 'utf-8')
     .replace(/\{\{([^}]+)\}\}/g, (_, varName: string) => context[varName] ?? varName);
   log.debug('Inlining (purged) Bootstrap CSS for email...');
   email = await inlineBootstrapForEmail(email);
