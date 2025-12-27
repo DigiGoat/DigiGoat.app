@@ -5,23 +5,23 @@
     <div class="col-md-4 mb-4 mb-md-0">
       <nav id="features-nav-wrapper" class="flex-column align-items-stretch pe-md-4 border-bottom border-end py-3 py-md-4 position-sticky"
         style="top: 75px; max-height: calc(100vh - 75px - 16px); overflow-y: auto;">
-        <nav id="features-nav" class="nav nav-pills flex-md-column flex-row flex-wrap gap-2 small" #featuresNav> @for (feature of features;
-          track $index) { <nav class="nav nav-pills flex-column">
-            <a class="nav-link text-start px-2" routerLink="/features" [fragment]="feature.featureId" routerLinkActive="unsaved"
-              [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }">{{feature.feature}}</a>
-            @if(feature.subFeatures?.length) { <nav class="nav nav-pills flex-column"> @for (subFeature of feature.subFeatures ?? []; track
-              $index) { <a class="nav-link text-start px-2 ms-3 d-none d-md-block" routerLink="/features" [fragment]="subFeature.featureId"
+        <nav id="features-nav" class="nav nav-pills flex-md-column flex-row flex-wrap gap-2 small" #stepsNav> @for (step of steps; track
+          $index) { <nav class="nav nav-pills flex-column">
+            <a class="nav-link text-start px-2" routerLink="/get-started" [fragment]="step.id" routerLinkActive="unsaved"
+              [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }">{{step.step}}</a>
+            @if(step.subSteps?.length) { <nav class="nav nav-pills flex-column"> @for (subStep of step.subSteps ?? []; track $index) { <a
+                class="nav-link text-start px-2 ms-3 d-none d-md-block" routerLink="/get-started" [fragment]="subStep.id"
                 routerLinkActive="unsaved"
-                [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }">{{subFeature.feature}}</a>
+                [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }">{{subStep.step}}</a>
               } </nav> }
           </nav> } </nav>
       </nav>
     </div>
     <div class="col-md-8">
-      <div id="scroll-container" [scrollspy]="featuresNav" scrollspy-rootMargin="-75px 0px -70%" class="scrollspy-example-2" tabindex="0">
-        @for (feature of features; track $index) { <section [id]="feature.featureId" class="mb-5">
+      <div id="scroll-container" [scrollspy]="stepsNav" scrollspy-rootMargin="-75px 0px -70%" class="scrollspy-example-2" tabindex="0"> @for
+        (step of steps; track $index) { <section [id]="step.id" class="mb-5">
           <h2 class="h4 mb-2">
-            {{feature.feature}} <a class="ps-1 hyperlink" routerLink="/features" [fragment]="feature.featureId" routerLinkActive="active"
+            {{step.step}} <a class="ps-1 hyperlink" routerLink="/get-started" [fragment]="step.id" routerLinkActive="active"
               [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }"><svg
                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
                 <path
@@ -30,11 +30,10 @@
                   d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
               </svg></a>
           </h2>
-          <p [innerHTML]="feature.description"></p> @if(feature.subFeatures?.length) { @for (subFeature of feature.subFeatures ?? []; track
-          $index) { <section [id]="subFeature.featureId" class="mb-3 ps-5">
+          <div [innerHTML]="step.description"></div> @if(step.subSteps?.length) { @for (subStep of step.subSteps ?? []; track $index) {
+          <section [id]="subStep.id" class="mb-3 ps-5">
             <h3 class="h5 mb-1">
-              {{subFeature.feature}} <a class="ps-1 hyperlink" routerLink="/features" [fragment]="subFeature.featureId"
-                routerLinkActive="active"
+              {{subStep.step}} <a class="ps-1 hyperlink" routerLink="/get-started" [fragment]="subStep.id" routerLinkActive="active"
                 [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }"><svg
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg"
                   viewBox="0 0 16 16">
@@ -44,7 +43,7 @@
                     d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
                 </svg></a>
             </h3>
-            <p [innerHTML]="subFeature.description"></p>
+            <div [innerHTML]="subStep.description"></div>
           </section> } }
         </section> } </div>
     </div>

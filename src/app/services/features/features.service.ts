@@ -67,7 +67,7 @@ export interface FeatureDetails {
   subFeatures?: FeatureDetails[];
 }
 
-interface JsonFeature {
+export interface JsonFeature {
   feature: string;
   description: string;
   digiGoat: FeatureSupport;
@@ -83,4 +83,4 @@ interface JsonFeature {
  * 'partial': Partially supported
  * string: Description of support level
  */
-type FeatureSupport = boolean | 'premium' | 'partial' | string;
+export type FeatureSupport = boolean | 'premium' | 'partial' | string;

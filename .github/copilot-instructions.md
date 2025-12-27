@@ -142,7 +142,7 @@ Prefer the repo’s existing scripts. Typical expectations:
 - Build should pass
 - Lint should pass
 
-If the repo supports tests, run them—but docs repos often rely primarily on build/lint. Note that scripts should be run via `yarn build`, `yarn lint`, etc., NOT via the vscode tasks, those are for debugging sessions only.
+If the repo supports tests, run them—but docs repos often rely primarily on build/lint. Note that scripts should be run via `yarn build`, `yarn lint`, etc., NOT via the vscode tasks, those are for debugging sessions only. Also use `yarn` not `npm`.
 
 ---
 

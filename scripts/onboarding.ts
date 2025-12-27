@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { readFileSync } from 'fs';
+import { createReadStream, readFileSync } from 'fs';
 import { createTransport } from 'nodemailer';
 import { join } from 'path';
 
@@ -16,6 +16,21 @@ const log = {
   error: (...message: unknown[]): void => console.error(`${ci ? '::error::' : ''}${chalk.redBright(...message)}`),
   success: (...message: unknown[]): void => console.log(chalk.greenBright(...message)),
   notice: (...message: unknown[]): void => console.log(ci ? '::notice::' : '', chalk.cyanBright(...message)),
+};
+
+const mask = (value?: string): string => {
+  if (typeof value !== 'string') return '';
+  if (value.length <= 2) return value;
+  const emailStr = value.split('@');
+  if (emailStr.length > 1) {
+    return mask(emailStr[0]) + '@' + emailStr[1];
+  }
+  const splitStr = value.split(' ');
+  if (splitStr.length > 1) {
+    return splitStr.map((part) => mask(part)).join(' ');
+  } else {
+    return value[0] + '*'.repeat(value.length - 2) + value[value.length - 1];
+  }
 };
 
 function createContext() {
@@ -35,16 +50,16 @@ function createContext() {
   }
   if (process.env['ONBOARD_TOKEN']) {
     payloadObj.token = process.env['ONBOARD_TOKEN'];
-    log.debug('Token set to', payloadObj.token);
+    log.debug('Token set to', mask(payloadObj.token));
   }
   if (process.env['ONBOARD_NAME']) {
     payloadObj.name = process.env['ONBOARD_NAME'];
-    log.debug('Name set to', payloadObj.name);
+    log.debug('Name set to', mask(payloadObj.name));
   }
   if (process.env['ONBOARD_EMAIL']) {
     payloadObj.email = process.env['ONBOARD_EMAIL'];
     userEmail = process.env['ONBOARD_EMAIL'];
-    log.debug('Email set to', userEmail);
+    log.debug('Email set to', mask(userEmail));
   } else {
     log.error('ONBOARD_EMAIL is not set, this is required.');
     process.exit(1);
@@ -56,18 +71,16 @@ function createContext() {
 async function createEmail(context: Record<string, string | undefined>) {
   log.debug('Reading and formatting email...');
   // Replace {{VAR}} with context values (fallback to the var name)
-  let email = readFileSync(join(__dirname, `./templates/onboardingv2.html`), 'utf-8')
+  let email = readFileSync(join(__dirname, `./templates/onboarding.html`), 'utf-8')
     .replace(/\{\{([^}]+)\}\}/g, (_, varName: string) => context[varName] ?? varName);
   log.debug('Inlining (purged) Bootstrap CSS for email...');
   email = await inlineBootstrapForEmail(email);
   log.debug('Reading and formatting raw email...');
-  log.debug(email);
-  // Replace {{VAR}} with process.env['VAR'] values (fallback to empty string)
+  // Replace {{VAR}} with context values (fallback to the var name)
   const rawEmail = readFileSync(join(__dirname, './templates/onboarding.txt'), 'utf-8').replace(/\{\{([^}]+)\}\}/g, (_, varName: string) => context[varName] ?? varName);
   return { email, rawEmail };
 }
 async function sendEmail(email: string, rawEmail: string, to: string) {
-  log.debug('Sending onboarding email to', to);
   log.debug('Creating transporter...');
   // Create a test account or replace with real credentials.
   const transporter = createTransport({
@@ -79,7 +92,7 @@ async function sendEmail(email: string, rawEmail: string, to: string) {
       pass: process.env['EMAIL_PASSWORD'] || '',
     },
   });
-  log.debug('Sending email to', to);
+  log.debug('Sending email to', mask(to));
   await transporter.sendMail({
     from: '"DigiGoat Onboarding" <onboarding@digigoat.app>',
     sender: 'onboarding@digigoat.app',
@@ -92,8 +105,8 @@ async function sendEmail(email: string, rawEmail: string, to: string) {
     attachments: [
       {
         filename: 'web-app-manifest-192x192.png',
-        path: '../src/assets/icons/web-app-manifest-192x192.png',
-        cid: 'web-app-manifest-192x192.png', // same cid value as in the html img src
+        content: createReadStream(join(__dirname, '../src/assets/icons/web-app-manifest-192x192.png')),
+        cid: 'digi@digigoat.app', // same cid value as in the html img src
       },
     ],
 
@@ -105,6 +118,12 @@ async function sendEmail(email: string, rawEmail: string, to: string) {
   log.info('Creating onboarding email...');
   const { email, rawEmail } = await createEmail(context);
   log.info('Sending onboarding email...');
-  await sendEmail(email, rawEmail, context.EMAIL);
-  log.success('Email sent to', context.EMAIL);
+  try {
+    await sendEmail(email, rawEmail, context.EMAIL);
+  } catch (error) {
+    log.error('Failed to send email:', error);
+    log.debug('Email content:', email);
+    process.exit(1);
+  }
+  log.success('Email sent to', mask(context.EMAIL));
 })();
