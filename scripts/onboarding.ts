@@ -21,7 +21,16 @@ const log = {
 const mask = (value?: string): string => {
   if (typeof value !== 'string') return '';
   if (value.length <= 2) return value;
-  return value[0] + '*'.repeat(value.length - 2) + value[value.length - 1];
+  const emailStr = value.split('@');
+  if (emailStr.length > 1) {
+    return mask(emailStr[0]) + '@' + emailStr[1];
+  }
+  const splitStr = value.split(' ');
+  if (splitStr.length > 1) {
+    return splitStr.map((part) => mask(part)).join(' ');
+  } else {
+    return value[0] + '*'.repeat(value.length - 2) + value[value.length - 1];
+  }
 };
 
 function createContext() {
@@ -50,8 +59,7 @@ function createContext() {
   if (process.env['ONBOARD_EMAIL']) {
     payloadObj.email = process.env['ONBOARD_EMAIL'];
     userEmail = process.env['ONBOARD_EMAIL'];
-    const splitEmail = userEmail.split('@');
-    log.debug('Email set to', mask(splitEmail[0]) + splitEmail[1]);
+    log.debug('Email set to', mask(userEmail));
   } else {
     log.error('ONBOARD_EMAIL is not set, this is required.');
     process.exit(1);
@@ -73,8 +81,6 @@ async function createEmail(context: Record<string, string | undefined>) {
   return { email, rawEmail };
 }
 async function sendEmail(email: string, rawEmail: string, to: string) {
-  const splitEmail = to.split('@');
-  log.debug('Sending onboarding email to', mask(splitEmail[0]) + splitEmail[1]);
   log.debug('Creating transporter...');
   // Create a test account or replace with real credentials.
   const transporter = createTransport({
@@ -86,7 +92,7 @@ async function sendEmail(email: string, rawEmail: string, to: string) {
       pass: process.env['EMAIL_PASSWORD'] || '',
     },
   });
-  log.debug('Sending email to', to);
+  log.debug('Sending email to', mask(to));
   await transporter.sendMail({
     from: '"DigiGoat Onboarding" <onboarding@digigoat.app>',
     sender: 'onboarding@digigoat.app',
@@ -112,6 +118,12 @@ async function sendEmail(email: string, rawEmail: string, to: string) {
   log.info('Creating onboarding email...');
   const { email, rawEmail } = await createEmail(context);
   log.info('Sending onboarding email...');
-  await sendEmail(email, rawEmail, context.EMAIL);
-  log.success('Email sent to', context.EMAIL);
+  try {
+    await sendEmail(email, rawEmail, context.EMAIL);
+  } catch (error) {
+    log.error('Failed to send email:', error);
+    log.debug('Email content:', email);
+    process.exit(1);
+  }
+  log.success('Email sent to', mask(context.EMAIL));
 })();
