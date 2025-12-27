@@ -1,3 +1,6 @@
+## 1.7.0
+* Added onboarding email to onboard new clients!
+
 ## 1.6.0
 * Added a setup page that open DigiGoat with their setup via a deep link.
   * The page is located at `/setup` and will redirect to the deep link after a short delay.
