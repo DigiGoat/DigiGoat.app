@@ -51,9 +51,13 @@ jobs:
           cache: yarn
           cache-dependency-path: yarn.lock
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Onboard New User
         run: yarn onboard
         env:
+          FORCE_COLOR: 3
           ONBOARD_REPO: ${{ github.event.inputs.repo }}
           ONBOARD_TOKEN: ${{ github.event.inputs.token }}
           ONBOARD_EMAIL: ${{ github.event.inputs.email }}
