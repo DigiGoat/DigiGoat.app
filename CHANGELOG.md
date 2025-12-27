@@ -1,3 +1,6 @@
+## 1.7.1
+* Finalized onboarding email content and stylings!
+
 ## 1.7.0
 * Added onboarding email to onboard new clients!
 
