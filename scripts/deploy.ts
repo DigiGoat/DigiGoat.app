@@ -196,7 +196,7 @@ function robots() {
   writeFileSync(join(__dirname, '../dist/digi-goat/browser/robots.txt'),
     `# Allow all URLs (see https://www.robotstxt.org/robotstxt.html)
 User-agent: *
-Disallow:
+Disallow: /setup
 Sitemap: https://digigoat.app/sitemap.xml`);
 }
 (async () => {

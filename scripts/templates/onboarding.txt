@@ -1,0 +1,8 @@
+DigiGoat Onboarding
+
+Finish your DigiGoat setup by opening your personalized setup link:
+
+https://digigoat.app/setup?payload={{PAYLOAD}}&utm_medium=email&utm_campaign=onboarding
+
+If you didn’t request this email, you can ignore it.
+Need help? Reply to this email or contact support@digigoat.app.

@@ -1,0 +1,61 @@
+name: Onboard User
+
+on:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'The repository to use for the new user (ex. LilPilchuckCreek)'
+        required: true
+        type: string
+      token:
+        description: 'The personal access token to use for the new user'
+        required: true
+        type: string
+      email:
+        description: 'The email address of the new user'
+        required: true
+        type: string
+      name:
+        description: 'The name of the new user'
+        required: true
+        type: string
+
+
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+
+
+env:
+  BUILD_PATH: "." # default value when not using subfolders
+  YARN_IGNORE_ENGINES: true
+  TZ: America/Los_Angeles
+  # BUILD_PATH: subfolder
+
+jobs:
+  onboard:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+          cache-dependency-path: yarn.lock
+
+      - name: Onboard New User
+        run: yarn onboard
+        env:
+          ONBOARD_REPO: ${{ github.event.inputs.repo }}
+          ONBOARD_TOKEN: ${{ github.event.inputs.token }}
+          ONBOARD_EMAIL: ${{ github.event.inputs.email }}
+          ONBOARD_NAME: ${{ github.event.inputs.name }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
