@@ -1,3 +1,7 @@
+## 2.0.0
+* Rewrote the features page to have actual content and not just AI boilerplate
+  * This is a breaking change because the mention of a youth discount was removed
+
 ## 1.8.0
 * Added the "Get Started" Page!
   * This page provides a step-by-step guide to getting started with DigiGoat, including purchasing a subscription, setting up custom domains, and more.

@@ -1,259 +1,248 @@
 [
   {
-    "feature": "Works with ADGA",
-    "description": "Deep integration with ADGA so you can sync owned goats, registration details, and related goats with a click instead of manual data entry.",
+    "feature": "Designed for dairy goat farms, by a dairy goat farmer.",
+    "description": "DigiGoat is built from the ground up to meet the unique needs of dairy goat farms, with features tailored specifically for managing and showcasing your herd.",
     "digiGoat": true,
-    "wordPress": false,
     "wix": false,
+    "wordPress": false,
     "subFeatures": [
       {
-        "feature": "A Page For Each Goat",
-        "description": "Automatically generated, consistent pages for each goat in your herd, powered by synced registration and pedigree data.",
+        "feature": "ADGA Integration",
+        "description": "Seamlessly import and sync your herd data directly from the American Dairy Goat Association (ADGA) database, ensuring your website always reflects the most up-to-date information about your goats.",
         "digiGoat": true,
-        "wordPress": "partial",
-        "wix": "partial"
+        "wix": false,
+        "wordPress": false
       },
       {
-        "feature": "Built-In Gestation Calculator",
-        "description": "Gestation calculator tailored for dairy goats so you can plan kidding dates directly alongside your herd data.",
+        "feature": "CDCB Integration",
+        "description": "Easily import milk test results from the Council on Dairy Cattle Breeding (CDCB) to provide comprehensive profiles for each of your goats.",
         "digiGoat": true,
-        "wordPress": false,
-        "wix": false
-      }
-    ]
-  },
-  {
-    "feature": "Live preview of your site",
-    "description": "Real-time preview of your public website as you edit content so you can catch layout and content issues before publishing.",
-    "digiGoat": true,
-    "wordPress": true,
-    "wix": true,
-    "subFeatures": [
-      {
-        "feature": "Live preview works offline",
-        "description": "Live preview continues to function even without an active internet connection so you can keep editing anywhere.",
-        "digiGoat": true,
-        "wordPress": false,
-        "wix": false
+        "wix": false,
+        "wordPress": false
       },
       {
-        "feature": "Live preview with GFM Markdown support",
-        "description": "GitHub Flavored Markdown is rendered locally so you can write content in Markdown and see the exact result in the preview.",
+        "feature": "Built-in Gestation Calculator",
+        "description": "Automatically calculates due dates based on breeding dates, helping you manage your herd's kidding schedule effectively.",
         "digiGoat": true,
-        "wordPress": "partial",
-        "wix": false
+        "wix": false,
+        "wordPress": false
+      },
+      {
+        "feature": "A page for every goat",
+        "description": "Each goat in your herd gets its own dedicated page, complete with photos, lineage, and performance data.",
+        "digiGoat": true,
+        "wix": "partial",
+        "wordPress": "partial"
+      },
+      {
+        "feature": "Consistent Layout",
+        "description": "All goat pages follow a consistent layout designed specifically for dairy goats, ensuring a professional and uniform appearance across your site.",
+        "digiGoat": true,
+        "wix": "partial",
+        "wordPress": "partial"
       }
     ]
   },
   {
-    "feature": "Works offline",
-    "description": "Core editing experience and preview keep working without a network connection so you can update your site from the barn or the road.",
+    "feature": "Internet Efficient",
+    "description": "DigiGoat is optimized for farms with limited internet connectivity (or at shows), ensuring smooth operation even with intermittent access.",
     "digiGoat": true,
-    "wordPress": false,
     "wix": false,
+    "wordPress": false,
     "subFeatures": [
       {
-        "feature": "Internet efficient",
-        "description": "Minimizes network usage by syncing only when needed (such as ADGA syncs and publishing).",
+        "feature": "Offline First",
+        "description": "DigiGoat is designed to work offline. This means that the only times you need internet access are when you first download the app, when you publish changes to your website, and when you sync with ADGA/CDCB. This means that when you're at shows and want to add show wins in before you forget, you can do it offline and publish later when you have internet access.",
         "digiGoat": true,
-        "wordPress": false,
-        "wix": false
+        "wix": false,
+        "wordPress": false
+      },
+      {
+        "feature": "Offline Live Preview",
+        "description": "Live Preview works offline as well, so you can see what your website will look like even when you don't have internet access.",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": false
+      },
+      {
+        "feature": "Optimized Website Design",
+        "description": "DigiGoat websites are built to be lightweight and fast-loading, even on slower connections. This ensures that visitors to your site have a smooth experience regardless of their internet speed. What's even better is the websites are designed to keep the assets in-memory, so once you pull up your website you can keep using it through internet interruptions. Images are also optimized to load on a need-to-see basis, so loading times are kept to a minimum.",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": false
       }
     ]
   },
   {
-    "feature": "Optimized for search engines",
-    "description": "Pages are rendered in a search-engine-friendly way so more people can discover your herd.",
+    "feature": "Optimized For Search Results",
+    "description": "DigiGoat websites are built with search engine optimization (SEO) best practices in mind, helping your farm rank higher in search results and attract more visitors.",
     "digiGoat": true,
-    "wordPress": false,
-    "wix": false,
+    "wix": "partial",
+    "wordPress": "partial",
     "subFeatures": [
       {
         "feature": "Automated SEO",
-        "description": "SEO best practices like titles, descriptions, and structured markup are handled for you out of the box.",
+        "description": "DigiGoat automatically generates SEO-friendly metadata for your website and individual goat pages, improving your visibility on search engines. This means you don't have to worry about what data to try to cram into search results, DigiGoat does it for you.",
         "digiGoat": true,
-        "wordPress": false,
-        "wix": false
-      },
-      {
-        "feature": "Open Graph Protocol",
-        "description": "Goat and farm pages include Open Graph metadata so shared links look great on social media.",
-        "digiGoat": true,
-        "wordPress": true,
-        "wix": "partial"
+        "wix": false,
+        "wordPress": false
       },
       {
         "feature": "IndexNow Support",
-        "description": "Automatically notifies supported search engines when pages are updated so your site stays fresh in results.",
+        "description": "DigiGoat websites support IndexNow, a protocol that allows search engines to be notified of content changes on your site in real-time. This helps ensure that your latest updates are quickly reflected in search results.",
         "digiGoat": true,
-        "wordPress": "partial",
-        "wix": "premium"
+        "wix": "premium",
+        "wordPress": "partial"
+      },
+      {
+        "feature": "Open Graph Support",
+        "description": "DigiGoat websites include Open Graph metadata, which enhances the appearance of your links when shared on social media platforms. This can help increase engagement and drive more traffic to your site.",
+        "digiGoat": true,
+        "wix": "partial",
+        "wordPress": true
+      }
+    ]
+  },
+  {
+    "feature": "User Over Profit",
+    "description": "DigiGoat is committed to putting users first, with a focus on delivering a product that is east to use and just makes sense. This means taking input from people you can actually relate to when making changes.",
+    "digiGoat": true,
+    "wix": false,
+    "wordPress": false,
+    "subFeatures": [
+      {
+        "feature": "Personalized Support",
+        "description": "DigiGoat offers personalized support from a real dairy goat farmer who understands your needs. This means you can get help and advice from someone who truly gets it, rather than a generic support team.",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": false
+      },
+      {
+        "feature": "Community Driven Development",
+        "description": "DigiGoat's development is driven by feedback from its user community, ensuring that new features and improvements are aligned with the needs of dairy goat farmers.",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": false
+      },
+      {
+        "feature": "Automatic Website Improvements",
+        "description": "DigiGoat websites automatically receive improvements and optimizations over time, ensuring that your site stays up-to-date with the latest best practices without any extra effort on your part.",
+        "digiGoat": true,
+        "wix": true,
+        "wordPress": true
+      },
+      {
+        "feature": "Ad-Free",
+        "description": "DigiGoat is committed to providing a clean and focused user experience, free from ads or upsells that can detract from the core functionality of the product. The only advertising you will see is the non-intrusive <code>This Site Was Created and Is Maintained Using DigiGoat</code> snippet in the footer of your site.",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": false
+      }
+    ]
+  },
+  {
+    "feature": "Designed for simplicity",
+    "description": "Websites shouldn't take a professional web developer to design and maintain. DigiGoat is built to be as simple as possible while still providing powerful features.",
+    "digiGoat": true,
+    "wix": false,
+    "wordPress": false,
+    "subFeatures": [
+      {
+        "feature": "Markdown Support",
+        "description": "Easily create and format content using Markdown, a simple and intuitive markup language that allows you to focus on writing without getting bogged down in complex formatting options.",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": true
+      },
+      {
+        "feature": "Smart recommendations",
+        "description": "DigiGoat provides intelligent recommendations based on your herd data, helping you quickly fill out simple information like goat names, your farm name, and more.",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": false
       }
     ]
   },
   {
     "feature": "Analytics support",
-    "description": "First-class support for popular analytics tools so you can understand how visitors use your site.",
+    "description": "DigiGoat websites support integration with popular analytics platforms, allowing you to track visitor behavior and gain insights into your website's performance.",
     "digiGoat": true,
-    "wordPress": "premium",
     "wix": "premium",
+    "wordPress": "premium",
     "subFeatures": [
       {
         "feature": "Google Analytics",
-        "description": "Easily integrate Google Analytics to track visitor behavior and site performance.",
+        "description": "Your website will automatically be enrolled in Google Analytics support, allowing you to track visitor behavior and gain insights into your website's performance.",
         "digiGoat": true,
-        "wordPress": "premium",
-        "wix": "premium"
+        "wix": "premium",
+        "wordPress": "premium"
       },
       {
         "feature": "Microsoft Clarity",
-        "description": "Support for privacy-centric analytics tools that respect visitor data and comply with regulations.",
+        "description": "DigiGoat websites also use Microsoft Clarity, a free analytics tool that provides heatmaps and session recordings to help you understand how visitors interact with your site.",
         "digiGoat": true,
-        "wordPress": "partial",
-        "wix": "partial"
-      }
-    ]
-  },
-  {
-    "feature": "Markdown support",
-    "description": "Compose content using GitHub Flavored Markdown for a fast, keyboard-friendly writing experience.",
-    "digiGoat": true,
-    "wordPress": true,
-    "wix": false
-  },
-  {
-    "feature": "Modern SPA architecture",
-    "description": "Single Page Application design keeps navigation snappy after the initial load while still playing nicely with SEO.",
-    "digiGoat": true,
-    "wordPress": false,
-    "wix": false,
-    "subFeatures": [
-      {
-        "feature": "Optimized image loading",
-        "description": "Lazy loading and image optimization ensure goat photos load quickly without sacrificing quality.",
-        "digiGoat": true,
-        "wordPress": false,
-        "wix": false
-      }
-    ]
-  },
-  {
-    "feature": "Consistent layout",
-    "description": "Pages across your site share a cohesive layout tuned for dairy goat farms, reducing the chance of broken or inconsistent designs.",
-    "digiGoat": true,
-    "wordPress": "partial",
-    "wix": "partial"
-  },
-  {
-    "feature": "Automatic updates",
-    "description": "Platform updates and improvements are rolled out automatically so you always have the latest features without manual maintenance.",
-    "digiGoat": true,
-    "wordPress": true,
-    "wix": true
-  },
-  {
-    "feature": "Ad-free experience",
-    "description": "Your farm website focuses entirely on your herd, with no third-party ads.",
-    "digiGoat": true,
-    "wordPress": true,
-    "wix": true
-  },
-  {
-    "feature": "Open and community-driven",
-    "description": "DigiGoat is open source and shaped by real dairy goat farms, so you can review the features and help guide the roadmap.",
-    "digiGoat": true,
-    "wordPress": false,
-    "wix": false,
-    "subFeatures": [
-      {
-        "feature": "Open source",
-        "description": "The entire codebase is public, giving you transparency into how your site works.",
-        "digiGoat": true,
-        "wordPress": false,
-        "wix": false
+        "wix": "partial",
+        "wordPress": "partial"
       },
       {
-        "feature": "Community driven",
-        "description": "New features and improvements are prioritized based on feedback from the dairy goat community.",
+        "feature": "Google Search Console",
+        "description": "DigiGoat websites are automatically set up with Google Search Console, allowing you to monitor your site's presence in Google search results and optimize your SEO strategy. DigiGoat also automatically submits sitemaps and keeps track of any issues with your website.",
         "digiGoat": true,
-        "wordPress": false,
-        "wix": false
+        "wix": "partial",
+        "wordPress": "partial"
+      },
+      {
+        "feature": "Bing Webmaster Tools",
+        "description": "DigiGoat websites are also set up with Bing Webmaster Tools, allowing you to monitor your site's presence in Bing search results and optimize your SEO strategy. DigiGoat automatically submits sitemaps and keeps track of any issues with your website.",
+        "digiGoat": true,
+        "wix": "partial",
+        "wordPress": "partial"
       }
     ]
   },
   {
-    "feature": "Personalized experience and support",
-    "description": "Designed by and for dairy goat farms, with human, farm-aware support when you need help.",
+    "feature": "Custom Domains & Emails",
+    "description": "DigiGoat comes with a custom domain and comes with options for custom email addresses and email forwards.",
     "digiGoat": true,
-    "wordPress": false,
-    "wix": false,
-    "subFeatures": [
-      {
-        "feature": "For Dairy Goat Farms, By a Dairy Goat Farm",
-        "description": "Built around ADGA and CDCB data and the real workflows of working dairy goat farms.",
-        "digiGoat": true,
-        "wordPress": false,
-        "wix": false
-      },
-      {
-        "feature": "Personalized recommendations",
-        "description": "Smart suggestions for things like barn names and starter website copy so you spend less time on repetitive details.",
-        "digiGoat": true,
-        "wordPress": false,
-        "wix": false
-      },
-      {
-        "feature": "Personalized support",
-        "description": "Support from someone who can remember your farm and setup instead of a generic call center.",
-        "digiGoat": true,
-        "wordPress": false,
-        "wix": false
-      }
-    ]
-  },
-  {
-    "feature": "Custom domain and email",
-    "description": "Use a custom domain and matching email addresses so your farm looks professional online.",
-    "digiGoat": true,
-    "wordPress": "premium",
     "wix": "premium",
+    "wordPress": "premium",
     "subFeatures": [
       {
-        "feature": "Custom domain",
-        "description": "Own a dedicated URL like www.yourfarm.com instead of a generic subdomain.",
+        "feature": "Custom Domain",
+        "description": "Every DigiGoat website comes with a custom domain of your choice (e.g., www.yourfarmname.com) included in your subscription.",
         "digiGoat": true,
-        "wordPress": "1-year",
-        "wix": "1-year"
+        "wix": "1-year",
+        "wordPress": "1-year"
       },
       {
-        "feature": "Custom emails",
-        "description": "Create farm-branded email addresses (for example, info@yourfarm.com) tied to your domain.",
+        "feature": "Custom Email",
+        "description": "DigiGoat offers the option to set up a custom email address via iCloud Custom Email (e.g. digi@yourfarmname.com).",
         "digiGoat": true,
-        "wordPress": "premium",
-        "wix": "premium"
+        "wix": "partial",
+        "wordPress": "partial"
+      },
+      {
+        "feature": "Email Forwards",
+        "description": "DigiGoat also offers email forwards, allowing you to create multiple email aliases that forward to your existing email account (e.g., digi@yourfarmname.com --> yourname@gmail.com).",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": false
       }
     ]
   },
   {
-    "feature": "Pricing and discounts",
-    "description": "Straightforward pricing tailored for working farms, with additional discounts for youth projects.",
+    "feature": "Pricing",
+    "description": "DigiGoat offers transparent and competitive pricing, with a focus on delivering value to dairy goat farmers.",
     "digiGoat": "$100/year",
     "wordPress": "$48-$300/year",
     "wix": "$204-$432/year",
     "subFeatures": [
       {
-        "feature": "Simple pricing",
-        "description": "Flat annual fee with no surprise charges or addons.",
+        "feature": "All-Inclusive Pricing",
+        "description": "DigiGoat offers a simple all-inclusive pricing model, with no hidden fees or upsells. This means you get access to all features and updates for a single annual fee.",
         "digiGoat": true,
-        "wordPress": false,
-        "wix": false
-      },
-      {
-        "feature": "Youth discount",
-        "description": "Discounted pricing to make DigiGoat more accessible for 4-H and youth dairy goat projects.",
-        "digiGoat": true,
-        "wordPress": false,
-        "wix": false
+        "wix": false,
+        "wordPress": false
       }
     ]
   }
