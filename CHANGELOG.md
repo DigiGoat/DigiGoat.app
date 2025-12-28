@@ -1,3 +1,6 @@
+## 2.0.2
+* Fixed a bug causing the FAQ answers to overflow the page viewport on smaller screens.
+
 ## 2.0.1
 * Added a Markdown section to the FAQ page to allow for easier formatting of answers.
 * Added the current farms using DigiGoat to the home page.
