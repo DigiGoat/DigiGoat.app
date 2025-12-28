@@ -12,6 +12,11 @@
         "source": "/privacy",
         "destination": "/privacy-policy",
         "type": 301
+      },
+      {
+        "source": "/getting-started",
+        "destination": "/get-started",
+        "type": 301
       }
     ],
     "headers": [
