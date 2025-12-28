@@ -1,3 +1,6 @@
+## 2.0.3
+* Added instructions on how to update the app to the Get Started page.
+
 ## 2.0.2
 * Fixed a bug causing the FAQ answers to overflow the page viewport on smaller screens.
 
