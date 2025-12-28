@@ -1,3 +1,6 @@
+## 2.0.4
+* Added upcoming updates to the FAQ
+
 ## 2.0.3
 * Added instructions on how to update the app to the Get Started page.
 
