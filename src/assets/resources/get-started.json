@@ -94,5 +94,27 @@
         "description": "<p>Custom pages are perfect for those types of pages that just can't be automated, like \"About Us\", \"Goat Milk Soap\", or \"Goat Cheese\".</p><ol><li>To add a custom page, go the the custom pages tab in the app.</li><li>Click <strong>Add a Custom Page</strong>.</li><li>This should open the page you just created. In it, give the page a title (to be displayed in your sites menubar) and some content (markdown supported).</li><li>Once you're done, close the window and you're good to go!</li></ol>"
       }
     ]
+  },
+  {
+    "step": "Step 6: Updating the App",
+    "id": "updates",
+    "description": "<p>DigiGoat will occasionally release updates to add new features, fix bugs, and improve performance. When an update is available, you\u2019ll see a notification in the app.</p>",
+    "subSteps": [
+      {
+        "step": "Download DigiGoat",
+        "id": "download-update",
+        "description": "<ol><li>Just like when you first installed DigiGoat, you need to go to <a href=\"https://github.com/DigiGoat/client-app/releases/latest\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/DigiGoat/client-app/releases/latest</a>.</li><li>Download the installer for your computer:<ul><li><strong>Windows:</strong> download the file ending in <code>.Setup.exe</code>.</li><li><strong>Mac:</strong> download <code>-arm64.dmg</code> for M-series Macs, or <code>-x64.dmg</code> for Intel Macs. If you\u2019re unsure, pick <code>-x64.dmg</code>.</li></ul></li></ol>"
+      },
+      {
+        "step": "Install DigiGoat",
+        "id": "install-update",
+        "description": "<ol><li><strong>Windows:</strong> After download, Windows may show a warning. Click the <strong>More info</strong> link, then choose <strong>Run anyway</strong>. Then open the installer from your Downloads folder. <em>(Video coming soon.)</em></li><li><strong>Mac:</strong> Open the downloaded <code>.dmg</code>, then drag <strong>DigiGoat</strong> into your <strong>Applications</strong> folder. <em>(Video coming soon.)</em><div class=\"mt-2\"><strong>Important (macOS security):</strong> Due to recent Apple restrictions, you may need to \u201cde-quarantine\u201d the app. Open the <strong>Terminal</strong> app and run:<br><code>xattr -d com.apple.quarantine /Applications/DigiGoat.app</code></div></li></ol>"
+      },
+      {
+        "step": "That's It!",
+        "id": "done-update",
+        "description": "<p>Git is still installed on your computer from when you first set up DigiGoat, so you're now good to go!</p>"
+      }
+    ]
   }
 ]
