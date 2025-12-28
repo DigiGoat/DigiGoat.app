@@ -39,6 +39,15 @@
     </div>
   </header>
   <section class="text-center container">
+    <h2 class="h3 mb-3">Who is using DigiGoat?</h2>
+    <p>Check out one of the farms below to see how your site could be looking!</p>
+    <ul> @for (site of digiGoatSites; track $index) { <li class="mb-3">
+        <a [href]="site.url" target="_blank">
+          {{site.farm}}
+        </a> Since {{site.since | date:'MMMM yyyy'}}
+      </li> } </ul>
+  </section>
+  <section class="text-center container">
     <h2 class="h4 mb-3">Why DigiGoat?</h2>
     <p class="mb-4"> DigiGoat is built specifically for ADGA herds, so your website works the way you do. </p>
     <ul class="list-unstyled">
@@ -68,7 +77,7 @@
         </div>
       </div>
       <div class="table-scroll-x">
-        <table class="table table-bordered align-middle text-center color-scheme-tertiary mb-0">
+        <table class="table table-bordered align-middle text-center color-scheme-tertiary mb-0 table-hover">
           <thead class="color-scheme-secondary">
             <tr>
               <th scope="col">Features</th>
@@ -77,7 +86,7 @@
               <th scope="col">Wix</th>
             </tr>
           </thead>
-          <tbody> @for (feature of features; track $index) { <tr>
+          <tbody> @for (feature of features; track $index) { <tr routerLink="/features" [fragment]="feature.featureId">
               <th scope="row" class="text-start">
                 <a routerLink="/features" [fragment]="feature.featureId"
                   class="link-body-emphasis text-decoration-none">{{ feature.feature }}</a>
@@ -85,7 +94,8 @@
               <td class="fw-bold">{{ feature.digiGoat }}</td>
               <td class="fw-bold">{{ feature.wordPress }}</td>
               <td class="fw-bold">{{ feature.wix }}</td>
-            </tr> @for (subfeature of feature.subFeatures || []; track $index) { <tr>
+            </tr> @for (subfeature of feature.subFeatures || []; track $index) { <tr routerLink="/features"
+              [fragment]="subfeature.featureId">
               <th scope="row" class="text-start ps-4 fw-light">
                 <a routerLink="/features" [fragment]="subfeature.featureId"
                   class="link-body-emphasis text-decoration-none">{{ subfeature.feature }}</a>

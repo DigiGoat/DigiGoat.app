@@ -1,3 +1,8 @@
+## 2.0.1
+* Added a Markdown section to the FAQ page to allow for easier formatting of answers.
+* Added the current farms using DigiGoat to the home page.
+  * The data for this section is stored in `src/assets/resources/digigoat-sites.json` for easy updating in the future.
+
 ## 2.0.0
 * Rewrote the features page to have actual content and not just AI boilerplate
   * This is a breaking change because the mention of a youth discount was removed

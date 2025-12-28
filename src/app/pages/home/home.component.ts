@@ -1,17 +1,19 @@
-import { NgOptimizedImage } from '@angular/common';
+import { DatePipe, NgOptimizedImage } from '@angular/common';
 import { Component, inject, type OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import digiGoatSites from '../../../assets/resources/digigoat-sites.json';
 import { ImgDirective } from '../../directives/img/img.directive';
 import { FeaturesService, type FeatureSummary } from '../../services/features/features.service';
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage, ImgDirective, RouterModule],
+  imports: [NgOptimizedImage, ImgDirective, RouterModule, DatePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+  public digiGoatSites: { farm: string, url: string, since: string; }[] = digiGoatSites;
   public features: FeatureSummary[] = [];
 
   private featuresService = inject(FeaturesService);
