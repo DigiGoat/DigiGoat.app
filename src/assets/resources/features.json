@@ -21,6 +21,13 @@
         "wordPress": false
       },
       {
+        "feature": "Automatic Syncing",
+        "description": "Once you add your herd, DigiGoat will automatically sync with the CDCB every morning to keep your milk test results up-to-date without any extra effort on your part.",
+        "digiGoat": true,
+        "wix": false,
+        "wordPress": false
+      },
+      {
         "feature": "Built-in Gestation Calculator",
         "description": "Automatically calculates due dates based on breeding dates, helping you manage your herd's kidding schedule effectively.",
         "digiGoat": true,

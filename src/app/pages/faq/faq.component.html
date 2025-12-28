@@ -17,7 +17,7 @@
     <div [id]="faq.id" class="accordion-collapse collapse" routerLink="/faq" [fragment]="faq.id" routerLinkActive="show"
       [routerLinkActiveOptions]="{fragment: 'exact', matrixParams: 'ignored', queryParams: 'ignored', paths: 'subset' }"
       data-bs-parent="#faq-accordion">
-      <div class="accordion-body" [innerHTML]="faq.a">
+      <div class="accordion-body mx-3" [innerHTML]="faq.a">
       </div>
     </div> }
   </div>
