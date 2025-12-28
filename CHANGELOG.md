@@ -1,3 +1,6 @@
+## 2.0.5
+* Added "More detailed milk test reports" to the upcoming features in the FAQ
+
 ## 2.0.4
 * Added upcoming updates to the FAQ
 
