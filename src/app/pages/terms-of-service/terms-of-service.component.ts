@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './terms-of-service.component.scss'
 })
 export class TermsOfServiceComponent implements OnInit {
-  public lastUpdated = 'December 18, 2025';
+  public lastUpdated = 'January 9, 2026';
 
   private meta = inject(Meta);
   ngOnInit() {
