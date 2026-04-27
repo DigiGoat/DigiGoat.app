@@ -13,7 +13,7 @@ import { FeaturesService, type FeatureSummary } from '../../services/features/fe
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  public digiGoatSites: { farm: string, url: string, since: string; }[] = digiGoatSites;
+  public digiGoatSites: { farm: string; url: string; since: string }[] = digiGoatSites;
   public features: FeatureSummary[] = [];
 
   private featuresService = inject(FeaturesService);

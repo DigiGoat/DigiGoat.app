@@ -1,3 +1,9 @@
+## 2.0.7
+* Added Long Acres Farm to the herd!
+
+## 2.0.6
+* Updated the Privacy Policy and Terms of Service to reflect Sentry being added to the DigiGoat app.
+
 ## 2.0.5
 * Added "More detailed milk test reports" to the upcoming features in the FAQ
 

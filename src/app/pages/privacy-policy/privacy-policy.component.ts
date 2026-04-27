@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent implements OnInit {
-  public lastUpdated = 'December 18, 2025';
+  public lastUpdated = 'January 9, 2026';
 
   private meta = inject(Meta);
   ngOnInit(): void {
