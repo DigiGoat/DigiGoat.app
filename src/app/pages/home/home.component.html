@@ -42,9 +42,7 @@
     <h2 class="h3 mb-3">Who is using DigiGoat?</h2>
     <p>Check out one of the farms below to see how your site could be looking!</p>
     <ul> @for (site of digiGoatSites; track $index) { <li class="mb-3">
-        <a [href]="site.url" target="_blank">
-          {{site.farm}}
-        </a> Since {{site.since | date:'MMMM yyyy'}}
+        <a [href]="site.url" target="_blank">{{site.farm}}</a> (<span class="fst-italic">Since {{site.since | date:'MMMM yyyy'}}</span>)
       </li> } </ul>
   </section>
   <section class="text-center container">

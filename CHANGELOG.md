@@ -1,3 +1,6 @@
+## 2.0.9
+* Changed the formatting of the farms currently using DigiGoat
+
 ## 2.0.8
 * Fixed a bug causing deploys to fail if previously deployed artifacts had expired
 
