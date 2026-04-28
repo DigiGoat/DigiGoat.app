@@ -1,3 +1,6 @@
+## 2.0.8
+* Fixed a bug causing deploys to fail if previously deployed artifacts had expired
+
 ## 2.0.7
 * Added Long Acres Farm to the herd!
 
